@@ -3,11 +3,6 @@ class Number():
         self.value = value
 
     def num_digits(self, num, base):
-        """
-        input: int
-        returns number of digits to target number base
-        """
-
         digit = 0
         i = 0
 
@@ -29,7 +24,6 @@ class Number():
 class Decimal(Number):
     def __init__(self, value):
         super().__init__(value)
-        self.base = "dec"
         self.binary = None
         self.hexadecimal = None
 
@@ -70,10 +64,10 @@ class Decimal(Number):
     def __str__(self):
         return f"0d{self.value}"
 
+
 class Hexadecimal(Number):
     def __init__(self, value):
         super().__init__(value)
-        self.base = "hex"
         self.decimal = None
         self.binary = None
 
@@ -99,10 +93,10 @@ class Hexadecimal(Number):
     def __str__(self):
         return f"0x{self.value}"
 
+
 class Binary(Number):
     def __init__(self, value):
         super().__init__(value)
-        self.base = "bin"
         self.decimal = None
         self.hexadecimal = None
 
